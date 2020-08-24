@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'users/profile.css' %}"/>
+    <title>Profile</title>
+</head>
+<body>
+    <div class = main>
+        <p class="prof" align="center">{{ user.username }}'s Profile</p>
+        <div>
+            {% if messages %}
+                    {% for message in messages %}           <!-- this is the profile updated message -->
+                    <div>
+                    {{ message }}
+                    </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+        <div class = imagecontain>
+            <img class="image" src="{{user.profile.image.url}}">   <!-- Image -->
+        </div>
+        <p class="tx1">{{user.username}}</p>                <!-- only username and email-->
+        <p class="tx2">{{user.email}}</p>
+        <p class="ch" align="center">Change Username and Email</p>
+        <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% load widget_tweaks %}
+                {% render_field u_form.username class+="un" placeholder="Username" %}       <!-- username wala field which can be edited..  -->
+                {% render_field u_form.email class+="un" placeholder="Email"%}             <!-- email field -->
+                <p class="chp" align="center"><a href ="{% url 'password_reset' %}">Change Passowrd</p>
+                <p align=center>{{p_form}}</p>
+                <input type="submit" class="update" value="Update">         <!-- update button -->
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CinePy</title>
+ <link rel = "icon" href =  "cinepy.jpeg" type = "image/x-icon">
+  <link rel="stylesheet" href="{% static 'main/style.css' %}">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script type="text/javascript" src="{% static 'main/html5lightbox/html5lightbox.js' %} "></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="navbar">
+    <a href="{% url 'home' %}">CinePy</a>
+  <div class="dropdown">
+    <button class="dropbtn">Categories <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>Categories</h2>
+      </div>
+      <div class="row">
+        <div class="column">
+          <h3>Genere</h3>
+          <a href="{% url 'action' %}">Action</a>
+          <a href="{% url 'thriller' %}">Thriller</a>
+          <a href="{% url 'drama' %}">Drama</a>
+          <a href="{% url 'comedy' %}">Family And Comedy</a>
+          <a href="{% url 'romance' %}">Romance</a>
+          <a href="{% url 'fantasy' %}">Sci-Fi Fantasy</a>
+
+
+        </div>
+        <div class="column">
+          <h3>Top Charts</h3>
+          <a href="{% url 'popular' %}">Trending </a>
+          <a href="{% url 'oscars' %}">Academy Award Movies</a>
+          <a href="{% url 'top' %}">Top Rated</a>
+          </div>
+
+      </div>
+    </div>
+  </div>
+    
+
+    <a href="#sidebar" >
+        <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Close  X</a>
+
+  <a href="{% url 'profile' %}">Edit Profile</a>
+ 
+  <a href="{% url 'logout' %}">Log Out</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>
+  </div> </a>
+    </div>
+
+
+<header>
+    <h1>          Comedy Movies</h1>
+</header>
+
+
+
+<main>
+
+  <section>
+   
+    <ul>
+     <li class="item01">
+       <a href="{% static 'main/movies/knivesout.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/knivesout.jpg' %});">
+          <img src="{% static 'main/posters/Knives Out (2019)_result.jpeg' %}"></div></a>
+
+        <div class="card">
+        <h3>Knives Out (2019)</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur"> 2h 11min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item02"> <a href="{% static 'main/movies/21Bridges.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/21bridges1.jpg' %});">
+          <img src="{% static 'main/posters/21bridges.jpeg' %}"/> </div></a>
+        <div class="card">
+          <h3>21 Bridges</h3>
+          <div class="info">
+
+            <div class="age">R </div>
+            <div class="dur">1h 39min  </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Drama</span><span>Crime</span></div>
+        </div>
+      </li>
+      <li class="item03"> <a href="{% static 'main/movies/Birdsofprey.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/birdsofprey1.jpeg' %});">
+          <img src="{% static 'main/posters/birdsofprey2.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>Birds of Prey: And the Fantabulous Emancipation of One Harley Quinn (2020)</h3>
+          <div class="info">
+
+            <div class="age">R</div>
+            <div class="dur">1h 49min </div>
+          </div>
+          <div class="tags"><span>Action</span><span>Crime</span></div>
+        </div>
+      </li>
+      <li class="item04"> <a href="{% static 'main/movies/Code8.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/code81.jpeg' %});">
+          <img src="{% static 'main/posters/code82.jpg' %}"/></div></a>
+        <div class="card">
+          <h3>Code 8 (2019)</h3>
+          <div class="info">
+
+            <div class="age">A </div>
+            <div class="dur">1h 38min  </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item05"> <a href="{% static 'main/movies/Theinvisibleman.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/theinvisibleman2.jpeg' %});">
+          <img src="{% static 'main/posters/theinvisibleman1.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>The Invisible Man (2020)</h3>
+          <div class="info">
+
+            <div class="age">R</div>
+            <div class="dur"> 2h 4min</div>
+          </div>
+          <div class="tags"> <span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item06"> <a href="{% static 'main/movies/Dolittle.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/dolittle1.jpeg' %});">
+          <img src="{% static 'main/posters/dolittle2.jpg' %}"/></div></a>
+        <div class="card">
+          <h3>Dolittle (2020)</h3>
+          <div class="info">
+
+            <div class="age">PG</div>
+            <div class="dur">1h 41min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Family</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+<section>
+   
+    <ul>
+     <li class="item01">
+       <a href="{% static 'main/movies/knivesout.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/knivesout.jpg' %});">
+          <img src="{% static 'main/posters/Knives Out (2019)_result.jpeg' %}"></div></a>
+
+        <div class="card">
+        <h3>Knives Out (2019)</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur"> 2h 11min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item02"> <a href="{% static 'main/movies/21Bridges.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/21bridges1.jpg' %});">
+          <img src="{% static 'main/posters/21bridges.jpeg' %}"/> </div></a>
+        <div class="card">
+          <h3>21 Bridges</h3>
+          <div class="info">
+
+            <div class="age">R </div>
+            <div class="dur">1h 39min  </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Drama</span><span>Crime</span></div>
+        </div>
+      </li>
+      <li class="item03"> <a href="{% static 'main/movies/Birdsofprey.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/birdsofprey1.jpeg' %});">
+          <img src="{% static 'main/posters/birdsofprey2.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>Birds of Prey: And the Fantabulous Emancipation of One Harley Quinn (2020)</h3>
+          <div class="info">
+
+            <div class="age">R</div>
+            <div class="dur">1h 49min </div>
+          </div>
+          <div class="tags"><span>Action</span><span>Crime</span></div>
+        </div>
+      </li>
+      <li class="item04"> <a href="{% static 'main/movies/Code8.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/code81.jpeg' %});">
+          <img src="{% static 'main/posters/code82.jpg' %}"/></div></a>
+        <div class="card">
+          <h3>Code 8 (2019)</h3>
+          <div class="info">
+
+            <div class="age">A </div>
+            <div class="dur">1h 38min  </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item05"> <a href="{% static 'main/movies/Theinvisibleman.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/theinvisibleman2.jpeg' %});">
+          <img src="{% static 'main/posters/theinvisibleman1.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>The Invisible Man (2020)</h3>
+          <div class="info">
+
+            <div class="age">R</div>
+            <div class="dur"> 2h 4min</div>
+          </div>
+          <div class="tags"> <span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item06"> <a href="{% static 'main/movies/Dolittle.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/dolittle1.jpeg' %});">
+          <img src="{% static 'main/posters/dolittle2.jpg' %}"/></div></a>
+        <div class="card">
+          <h3>Dolittle (2020)</h3>
+          <div class="info">
+
+            <div class="age">PG</div>
+            <div class="dur">1h 41min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Family</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+
+<section>
+   
+    <ul>
+     <li class="item01">
+       <a href="{% static 'main/movies/knivesout.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/knivesout.jpg' %});">
+          <img src="{% static 'main/posters/Knives Out (2019)_result.jpeg' %}"></div></a>
+
+        <div class="card">
+        <h3>Knives Out (2019)</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur"> 2h 11min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item02"> <a href="{% static 'main/movies/21Bridges.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/21bridges1.jpg' %});">
+          <img src="{% static 'main/posters/21bridges.jpeg' %}"/> </div></a>
+        <div class="card">
+          <h3>21 Bridges</h3>
+          <div class="info">
+
+            <div class="age">R </div>
+            <div class="dur">1h 39min  </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Drama</span><span>Crime</span></div>
+        </div>
+      </li>
+      <li class="item03"> <a href="{% static 'main/movies/Birdsofprey.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/birdsofprey1.jpeg' %});">
+          <img src="{% static 'main/posters/birdsofprey2.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>Birds of Prey: And the Fantabulous Emancipation of One Harley Quinn (2020)</h3>
+          <div class="info">
+
+            <div class="age">R</div>
+            <div class="dur">1h 49min </div>
+          </div>
+          <div class="tags"><span>Action</span><span>Crime</span></div>
+        </div>
+      </li>
+      <li class="item04"> <a href="{% static 'main/movies/Code8.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/code81.jpeg' %});">
+          <img src="{% static 'main/posters/code82.jpg' %}"/></div></a>
+        <div class="card">
+          <h3>Code 8 (2019)</h3>
+          <div class="info">
+
+            <div class="age">A </div>
+            <div class="dur">1h 38min  </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item05"> <a href="{% static 'main/movies/Theinvisibleman.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/theinvisibleman2.jpeg' %});">
+          <img src="{% static 'main/posters/theinvisibleman1.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>The Invisible Man (2020)</h3>
+          <div class="info">
+
+            <div class="age">R</div>
+            <div class="dur"> 2h 4min</div>
+          </div>
+          <div class="tags"> <span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item06"> <a href="{% static 'main/movies/Dolittle.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/dolittle1.jpeg' %});">
+          <img src="{% static 'main/posters/dolittle2.jpg' %}"/></div></a>
+        <div class="card">
+          <h3>Dolittle (2020)</h3>
+          <div class="info">
+
+            <div class="age">PG</div>
+            <div class="dur">1h 41min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Family</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+
+<section>
+   
+    <ul>
+     <li class="item01">
+       <a href="{% static 'main/movies/knivesout.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/knivesout.jpg' %});">
+          <img src="{% static 'main/posters/Knives Out (2019)_result.jpeg' %}"></div></a>
+
+        <div class="card">
+        <h3>Knives Out (2019)</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur"> 2h 11min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item02"> <a href="{% static 'main/movies/21Bridges.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/21bridges1.jpg' %});">
+          <img src="{% static 'main/posters/21bridges.jpeg' %}"/> </div></a>
+        <div class="card">
+          <h3>21 Bridges</h3>
+          <div class="info">
+
+            <div class="age">R </div>
+            <div class="dur">1h 39min  </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Drama</span><span>Crime</span></div>
+        </div>
+      </li>
+      <li class="item03"> <a href="{% static 'main/movies/Birdsofprey.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/birdsofprey1.jpeg' %});">
+          <img src="{% static 'main/posters/birdsofprey2.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>Birds of Prey: And the Fantabulous Emancipation of One Harley Quinn (2020)</h3>
+          <div class="info">
+
+            <div class="age">R</div>
+            <div class="dur">1h 49min </div>
+          </div>
+          <div class="tags"><span>Action</span><span>Crime</span></div>
+        </div>
+      </li>
+      <li class="item04"> <a href="{% static 'main/movies/Code8.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/code81.jpeg' %});">
+          <img src="{% static 'main/posters/code82.jpg' %}"/></div></a>
+        <div class="card">
+          <h3>Code 8 (2019)</h3>
+          <div class="info">
+
+            <div class="age">A </div>
+            <div class="dur">1h 38min  </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item05"> <a href="{% static 'main/movies/Theinvisibleman.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/theinvisibleman2.jpeg' %});">
+          <img src="{% static 'main/posters/theinvisibleman1.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>The Invisible Man (2020)</h3>
+          <div class="info">
+
+            <div class="age">R</div>
+            <div class="dur"> 2h 4min</div>
+          </div>
+          <div class="tags"> <span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item06"> <a href="{% static 'main/movies/Dolittle.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/dolittle1.jpeg' %});">
+          <img src="{% static 'main/posters/dolittle2.jpg' %}"/></div></a>
+        <div class="card">
+          <h3>Dolittle (2020)</h3>
+          <div class="info">
+
+            <div class="age">PG</div>
+            <div class="dur">1h 41min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Family</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+
+<section>
+   
+    <ul>
+     <li class="item01">
+       <a href="{% static 'main/movies/knivesout.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/knivesout.jpg' %});">
+          <img src="{% static 'main/posters/Knives Out (2019)_result.jpeg' %}"></div></a>
+
+        <div class="card">
+        <h3>Knives Out (2019)</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur"> 2h 11min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item02"> <a href="{% static 'main/movies/21Bridges.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/21bridges1.jpg' %});">
+          <img src="{% static 'main/posters/21bridges.jpeg' %}"/> </div></a>
+        <div class="card">
+          <h3>21 Bridges</h3>
+          <div class="info">
+
+            <div class="age">R </div>
+            <div class="dur">1h 39min  </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Drama</span><span>Crime</span></div>
+        </div>
+      </li>
+      <li class="item03"> <a href="{% static 'main/movies/Birdsofprey.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/birdsofprey1.jpeg' %});">
+          <img src="{% static 'main/posters/birdsofprey2.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>Birds of Prey: And the Fantabulous Emancipation of One Harley Quinn (2020)</h3>
+          <div class="info">
+
+            <div class="age">R</div>
+            <div class="dur">1h 49min </div>
+          </div>
+          <div class="tags"><span>Action</span><span>Crime</span></div>
+        </div>
+      </li>
+      <li class="item04"> <a href="{% static 'main/movies/Code8.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/code81.jpeg' %});">
+          <img src="{% static 'main/posters/code82.jpg' %}"/></div></a>
+        <div class="card">
+          <h3>Code 8 (2019)</h3>
+          <div class="info">
+
+            <div class="age">A </div>
+            <div class="dur">1h 38min  </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item05"> <a href="{% static 'main/movies/Theinvisibleman.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/theinvisibleman2.jpeg' %});">
+          <img src="{% static 'main/posters/theinvisibleman1.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>The Invisible Man (2020)</h3>
+          <div class="info">
+
+            <div class="age">R</div>
+            <div class="dur"> 2h 4min</div>
+          </div>
+          <div class="tags"> <span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item06"> <a href="{% static 'main/movies/Dolittle.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/dolittle1.jpeg' %});">
+          <img src="{% static 'main/posters/dolittle2.jpg' %}"/></div></a>
+        <div class="card">
+          <h3>Dolittle (2020)</h3>
+          <div class="info">
+
+            <div class="age">PG</div>
+            <div class="dur">1h 41min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Family</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+</main>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="{% static 'main/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+</head>
+<body>
+<h1>Profile</h1>
+<h2>{{ user.username }}</h2>
+</body>
+</html> -->
+<html>
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'users/prof2.css' %}"/>
+<title>Profile</title>
+</head>
+<body>
+
+<div class="container">
+    <p class="prof">Profile</p>
+    <div class="content">
+        <img class="image" src="https://farm5.staticflickr.com/4223/34189680164_03d93f2598_b.jpg">
+        <div class="up">Upload Photo</div>
+        <div class="input">
+            <div class="Name">
+                <label for="text">Name</label>
+                <input class="text" type="text" name="fname" placeholder="Enter your name">
+            </div>
+            <div class="Name">
+                <label for="text">Email</label>
+                  <input class="text" type="Text" name="fname" >
+            </div>
+            <div class="Name">
+                <label for="text">Current Passowrd</label>
+                <input class="text" type="text" name="fname">
+            </div>
+            <div class="Name">
+                <label for="text">New Passowrd</label>
+                <input class="text" type="text" name="fname">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="button">Submit</div>
+</div>
+</body>
+</html>
+</html>

@@ -1,0 +1,37 @@
+<html>
+{%load static%}
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'users/register.css' %}"/>
+  <title>Sign up</title>
+</head>
+
+<body background="{% static 'bg.jpg' %}">
+  <div class="main">
+    <p class="sign" align="center">Sign Up</p>
+    <!-- <form class="form1" action="#" method="post">
+        {% csrf_token %}
+        <input class="nm" type="text" name="Name" placeholder="Name">
+        <input class="un " type="text" align="center" name="Email" placeholder="Email">
+        <input class="pass" type="password" align="center" name="Password" placeholder="Password">
+        <input type="submit" class="submit" align="center" value="Sign Up">
+    </form> -->
+    <form method="POST">
+        {% csrf_token %}
+        <!-- {{ form.as_p }} -->
+        {% load widget_tweaks %}
+        {% render_field form.username class+="un" placeholder=form.username.label %}
+        {% render_field form.email class+="em" placeholder=form.email.label %}
+        {% render_field form.password1 class+="pass" placeholder=form.password1.label %}
+        {% render_field form.password2 class+="pass" placeholder=form.password2.label %}
+        {% for field in form.visible_fields %}
+            {% for error in field.errors %}
+            <p style="color:red;size: 20" align="center"> {{ error }} </p>
+            {% endfor %}
+        {% endfor %}
+        <input type="submit" class="submit" align="center" value="Sign Up">
+
+    </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<html>
+{% load static %}
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/signin.css' %}"/>
+  <title>Sign in</title>
+</head>
+
+<body background="{% static 'bg.jpg' %}">
+
+  <div class="main">
+    <p class="sign" align="center">Sign in</p>
+    <!-- <form class="form1" action=# method="post">
+        {% csrf_token %}
+        <input class="un " type="text" align="center" name="Email" placeholder="Email">
+        <input class="pass" type="password" align="center" name="Password" placeholder="Password">
+        <input type="submit" class="submit" align="center">
+    </form> -->
+        <p style="color:red;size: 20" align="center">Invalid username or password</p>
+        <p class="signup" align="center"><a href=#>Not a member?</p>
+
+
+    </div>
+
+</body>
+
+</html>
+
+

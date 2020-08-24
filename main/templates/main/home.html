@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CinePy</title>
+  <link rel = "icon" href =  "cinepy.jpeg" type = "image/x-icon">
+  <link rel="stylesheet" href="{% static 'main/style.css' %}">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script type="text/javascript" src="{% static 'main/html5lightbox/html5lightbox.js' %} "></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="navbar">
+    <a href="{% url 'home' %}">CinePy</a>
+  <div class="dropdown">
+    <button class="dropbtn">Categories <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>Categories</h2>
+      </div>
+      <div class="row">
+        <div class="column">
+          <h3>Genere</h3>
+          <a href="{% url 'action' %}">Action</a>
+          <a href="{% url 'thriller' %}">Thriller</a>
+          <a href="{% url 'drama' %}">Drama</a>
+          <a href="{% url 'comedy' %}">Family And Comedy</a>
+          <a href="{% url 'romance' %}">Romance</a>
+          <a href="{% url 'fantasy' %}">Sci-Fi Fantasy</a>
+
+
+        </div>
+        <div class="column">
+          <h3>Top Charts</h3>
+          <a href="{% url 'popular' %}">Trending </a>
+          <a href="{% url 'oscars' %}">Academy Award Movies</a>
+          <a href="{% url 'top' %}">Top Rated</a>
+          </div>
+
+      </div>
+    </div>
+  </div>
+      
+
+
+    <a href="#sidebar" >
+        <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Close  X</a>
+
+  <a href="{% url 'profile' %}">Edit Profile</a>
+  <a href="{% url 'logout' %}">Log Out</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>
+  </div> </a>
+    </div>
+
+<main>
+
+  <section>
+    <a href="{% url 'popular' %}"><h2>Popular</h2></a>
+    <ul>
+     <li class="item01">
+       <a href="{% static 'main/movies/knivesout.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/knivesout.jpg' %});">
+          <img src="{% static 'main/posters/Knives Out (2019)_result.jpeg' %}"></div></a>
+
+        <div class="card">
+        <h3>Knives Out (2019)</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur"> 2h 11min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item02"> <a href="{% static 'main/movies/21Bridges.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/21bridges1.jpg' %});">
+          <img src="{% static 'main/posters/21bridges.jpeg' %}"/> </div></a>
+        <div class="card">
+          <h3>21 Bridges</h3>
+          <div class="info">
+
+            <div class="age">R </div>
+            <div class="dur">1h 39min  </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Drama</span><span>Crime</span></div>
+        </div>
+      </li>
+      <li class="item03"> <a href="{% static 'main/movies/Birdsofprey.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/birdsofprey1.jpeg' %});">
+          <img src="{% static 'main/posters/birdsofprey2.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>Birds of Prey: And the Fantabulous Emancipation of One Harley Quinn (2020)</h3>
+          <div class="info">
+
+            <div class="age">R</div>
+            <div class="dur">1h 49min </div>
+          </div>
+          <div class="tags"><span>Action</span><span>Crime</span></div>
+        </div>
+      </li>
+      <li class="item04"> <a href="{% static 'main/movies/Code8.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/code81.jpeg' %});">
+          <img src="{% static 'main/posters/code82.jpg' %}"/></div></a>
+        <div class="card">
+          <h3>Code 8 (2019)</h3>
+          <div class="info">
+
+            <div class="age">A </div>
+            <div class="dur">1h 38min  </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item05"> <a href="{% static 'main/movies/Theinvisibleman.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/theinvisibleman2.jpeg' %});">
+          <img src="{% static 'main/posters/theinvisibleman1.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>The Invisible Man (2020)</h3>
+          <div class="info">
+
+            <div class="age">R</div>
+            <div class="dur"> 2h 4min</div>
+          </div>
+          <div class="tags"> <span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item06"> <a href="{% static 'main/movies/Dolittle.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/dolittle1.jpeg' %});">
+          <img src="{% static 'main/posters/dolittle2.jpg' %}"/></div></a>
+        <div class="card">
+          <h3>Dolittle (2020)</h3>
+          <div class="info">
+
+            <div class="age">PG</div>
+            <div class="dur">1h 41min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Family</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <a href="{% url 'top' %}"><h2>Top Rated</h2></a>
+    <ul>
+      <li class="item01"> <a href="{% static 'main/movies/Joker.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/475557/moviethumb/joker-5db693c454a3e.jpg);"><img src="https://fanart.tv/fanart/movies/475557/moviebackground/joker-5d68337505352.jpg"/></div></a>
+        <div class="card">
+          <h3>Joker</h3>
+          <div class="info">
+
+            <div class="age">R</div>
+            <div class="dur">2h 2min</div>
+          </div>
+          <div class="tags"> <span>Drama</span><span>Crime</span><span>Thriller</span></div>
+        </div>
+      </li>
+      <li class="item03"> <a href="{% static 'main/movies/Parasite.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/496243/moviethumb/parasite-5d2d5ab30c73d.jpg);"><img src="https://fanart.tv/fanart/movies/496243/moviebackground/parasite-5df5fb5439d1d.jpg"/></div></a>
+        <div class="card">
+          <h3>Parasite</h3>
+          <div class="info">
+
+            <div class="age">TV-14</div>
+            <div class="dur">2h 12min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item04"> <a href="{% static 'main/movies/FordvsFerrari.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/359724/moviethumb/ford-v-ferrari-5db74ab5a49b9.jpg);"><img src="https://fanart.tv/fanart/movies/359724/moviebackground/go-like-hell-5d0839e2ecc25.jpg"/></div></a>
+        <div class="card">
+          <h3>Ford v. Ferrari</h3>
+          <div class="info">
+
+            <div class="age">TV-PG</div>
+            <div class="dur">2h 32min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Biography</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item05"> <a href="{% static 'main/movies/TheIrishman.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/398978/moviethumb/the-irishman-5ded4b24803d2.jpg);"><img src="https://fanart.tv/fanart/movies/398978/moviebackground/the-irishman-5de15d18d48f4.jpg"/></div></a>
+        <div class="card">
+          <h3>The Irishman</h3>
+          <div class="info">
+
+            <div class="age">TV-MA</div>
+            <div class="dur">3h 29min </div>
+          </div>
+          <div class="tags"> <span>Biography</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item06"> <a href="{% static 'main/movies/Marriagestory.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url(https://fanart.tv/fanart/movies/492188/moviethumb/marriage-story-5dd0c5d3db138.jpg);"><img src="https://fanart.tv/fanart/movies/492188/moviebackground/marriage-story-5def5bf3a229b.jpg"/></div></a>
+        <div class="card">
+          <h3>Marriage Story</h3>
+          <div class="info">
+
+            <div class="age">TV-14</div>
+            <div class="dur">2h 17min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Drama</span><span>Romance</span></div>
+        </div>
+      </li>
+      <li class="item06"> <a href="{% static 'main/movies/1917.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/19171.jpeg' %});">
+          <img src="{% static 'main/posters/19172.jpg' %}"/></div></a>
+        <div class="card">
+          <h3>1917 (2019 </h3>
+          <div class="info">
+
+            <div class="age">R</div>
+            <div class="dur">1h 59min</div>
+          </div>
+          <div class="tags"> <span>Drama</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+
+  <section>
+    <a href="{% url 'action' %}"> <h2>Action</h2></a>
+    <ul>
+      <li class="item01"> <a href="{% static 'main/movies/Bloodshot.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/bloodshot1.jpeg' %});">
+          <img src="{% static 'main/posters/bloodshot2.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>Bloodshot (2020)</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur"> 1h 49min  </div>
+          </div>
+          <div class="tags"><span>Action</span><span>Sci-Fi</span><span>Thriller</span></div>
+        </div>
+      </li>
+      <li class="item02"> <a href="{% static 'main/movies/Theavengers.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/theavengers.jpeg' %});">
+          <img src="{% static 'main/posters/theavengers2.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>The Avengers (2012)</h3>
+          <div class="info">
+
+            <div class="age">PG-13 </div>
+            <div class="dur"> 2h 23min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item03"> <a href="{% static 'main/movies/DragonballsuperBroly.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/dbsbroly.jpg' %});">
+          <img src="{% static 'main/posters/dbsbroly2.jpg' %}"/></div></a>
+        <div class="card">
+          <h3>Dragon Ball Super: Broly (2018)</h3>
+          <div class="info">
+
+            <div class="age">PG</div>
+            <div class="dur">1h 40min</div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Animation</span></div>
+        </div>
+      </li>
+      <li class="item04"> <a href="{% static 'main/movies/AvengersEndGame.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/endgame1.jpg' %});">
+          <img src="{% static 'main/posters/endgame2.jpg' %}"/></div></a>
+        <div class="card">
+          <h3>Avengers: Endgame (2019)</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur">3h 1min</div>
+          </div>
+          <div class="tags"> <span>Action </span><span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item05"> <a href="{% static 'main/movies/terminatordarkfate.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/terminator2.jpg' %});">
+          <img src="{% static 'main/posters/terminator1.jpg' %}"/></div></a>
+        <div class="card">
+          <h3>Terminator: Dark Fate (2019)</h3>
+          <div class="info">
+
+            <div class="age">R</div>
+            <div class="dur">2h 8min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Sci-Fi</span></div>
+        </div>
+      </li>
+      <li class="item06"> <a href="{% static 'main/movies/Zombieland2.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/zombieland1.jpeg' %});">
+          <img src="{% static 'main/posters/zombieland2.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>Zombieland: Double Tap (2019)</h3>
+          <div class="info">
+            <div class="age">R</div>
+            <div class="dur"> 1h 39min </div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Comedy</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+<section>
+  <a href="{% url 'fantasy' %}"><h2>Fantasy Sci_fi</h2></a>
+    <ul>
+      <li class="item01"> <a href="{% static 'main/movies/HP1.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/hpp1.1_result.jpg' %});">
+          <img src="{% static 'main/posters/hpp1.2_result.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>Harry Potter and the Sorcerer's Stone</h3>
+          <div class="info">
+
+            <div class="age">PG</div>
+            <div class="dur">2h 32min</div>
+          </div>
+          <div class="tags"> <span>Fantasy Sci-Fi</span><span>Family</span></div>
+        </div>
+      </li>
+      <li class="item02"> <a href="{% static 'main/movies/HP2.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/hpp2.2_result.jpg' %});">
+          <img src="{% static 'main/posters/hpp2.1_result.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>Harry Potter and the Chamber of Secrets</h3>
+          <div class="info">
+
+            <div class="age">PG</div>
+            <div class="dur">2h 41min </div>
+          </div>
+          <div class="tags"> <span>Fantasy Sci-Fi</span><span>Family</span></div>
+        </div>
+      </li>
+      <li class="item03"> <a href="{% static 'main/movies/fanatsticbeasts1.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/fbwtft.jpg' %});">
+          <img src="{% static 'main/posters/fbwtft1.jpg' %}"/></div></a>
+        <div class="card">
+          <h3>Fantastic Beasts and Where to Find Them</h3>
+          <div class="info">
+
+            <div class="age">TV-14</div>
+            <div class="dur">2h 12min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Crime</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item04"> <a href="{% static 'main/movies/Fantasticbeasts2.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/grindel.jpg' %});">
+          <img src="{% static 'main/posters/grindel2.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>Ford v. Ferrari</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur">2h 12min </div>
+          </div>
+          <div class="tags"> <span>Family</span><span>Fantasy</span></div>
+        </div>
+      </li>
+      <li class="item05"> <a href="{% static 'main/movies/DarkWaters.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/darkwaters.jpg' %});">
+          <img src="{% static 'main/posters/darkwaters.jpg' %}"/></div></a>
+        <div class="card">
+          <h3>Dark Waters (2019)</h3>
+          <div class="info">
+
+            <div class="age">PG-13 </div>
+            <div class="dur">2h 6min</div>
+          </div>
+          <div class="tags"><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item06"> <a href="{% static 'main/movies/themartian.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/themartian.jpeg' %});">
+          <img src="{% static 'main/posters/themartian2.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>The Martian (2015)</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur">2h 24min  </div>
+          </div>
+          <div class="tags"> <span>Drama</span><span>Fantasy Sci-Fi</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <a href="{% url 'comedy' %}"> <h2>Family</h2></a>
+    <ul>
+      <li class="item01"> <a href="{% static 'main/movies/Frozen2.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/frozen21.jpg' %});">
+          <img src="{% static 'main/posters/frozen22.jpg' %}"/></div></a>
+        <div class="card">
+          <h3>Frozen II</h3>
+          <div class="info">
+
+            <div class="age">PG</div>
+            <div class="dur"> 1h 43min</div>
+          </div>
+          <div class="tags"><span>Family</span><span>Animation</span></div>
+        </div>
+      </li>
+      <li class="item02"> <a href="{% static 'main/movies/spiesindisguise.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/spies.jpg' %});">
+          <img src="{% static 'main/posters/spies.jpg' %}"/></div></a>
+        <div class="card">
+          <h3>Spies in Disguise (2019)</h3>
+          <div class="info">
+
+            <div class="age">PG</div>
+            <div class="dur"> 1h 42min</div>
+          </div>
+          <div class="tags"> <span>Action</span><span>Family</span><span>Animation</span></div>
+        </div>
+      </li>
+      <li class="item03"> <a href="{% static 'main/movies/Instantfamily.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/instantfamily1.jpeg' %});">
+          <img src="{% static 'main/posters/instantfamily2.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>Instant Family (2018)</h3>
+          <div class="info">
+
+            <div class="age">PG-13</div>
+            <div class="dur"> 1h 58min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Drama</span><span>Family</span></div>
+        </div>
+      </li>
+      <li class="item04"> <a href="{% static 'main/movies/Littlewomen.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/littlewomen1.jpg' %});">
+          <img src="{% static 'main/posters/littlewomen2.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>Little Women (2019)</h3>
+          <div class="info">
+
+            <div class="age">PG</div>
+            <div class="dur"> 2h 15min</div>
+          </div>
+          <div class="tags"> <span>Romance</span><span>Drama</span></div>
+        </div>
+      </li>
+      <li class="item05"> <a href="{% static 'main/movies/Minions.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/minions1.jpg' %});">
+          <img src="{% static 'main/posters/minions2.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>Minions (2015)</h3>
+          <div class="info">
+
+            <div class="age">PG </div>
+            <div class="dur">1h 31min </div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Family</span><span>Animation</span></div>
+        </div>
+      </li>
+      <li class="item06"> <a href="{% static 'main/movies/Pokemondetective.mp4' %}" class="html5lightbox" data-width="480" data-height="320" title="">
+        <div class="img" style="background-image: url({% static 'main/posters/detectivepokemon1.jpeg' %});">
+          <img src="{% static 'main/posters/detectivepokemon2.jpeg' %}"/></div></a>
+        <div class="card">
+          <h3>Pokémon Detective Pikachu (2019)</h3>
+          <div class="info">
+
+            <div class="age">PG </div>
+            <div class="dur">1h 44min</div>
+          </div>
+          <div class="tags"> <span>Comedy</span><span>Family</span><span>Action</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+</main>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+  <script  src="{% static 'main/script.js' %}"></script>
+</body>
+<div class="footer">
+  <h3>Follow Us</h3>
+  <a href="#"><i class="fa fa-facebook " style="font-size:48px; margin-left: 4px;"></i></a>  <a href="#"><i class="fa fa-twitter" style="font-size:48px; margin-left: 4px;"></i></a>  <a href="#"><i class="fa fa-instagram" style="font-size:48px; margin-left: 4px;"></i></a>
+  <p class="copyright">&copy; CinePy. </p>
+</div>
+
+
+</html>
